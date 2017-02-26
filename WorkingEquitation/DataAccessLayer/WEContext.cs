@@ -6,19 +6,19 @@ using System.Web;
 
 namespace WorkingEquitation.DataAccessLayer
 {
-    public class AppContext : DbContext
+    public class WEContext : DbContext
     {
-        public AppContext() : base("DefaultConnection")
+        public WEContext() : base("WEContext")
         {
         }
 
         public DbSet<Models.Class> db_Classes { get; set; }
-        public DbSet<Models.Entry> db_Entrys { get; set; }
-        public DbSet<Models.Horse> db_Horses { get; set; }
-        public DbSet<Models.Rider> db_Riders { get; set; }
-        public DbSet<Models.Show> db_Shows { get; set; }
-        public DbSet<Models.ShowCrew> db_ShowCrews { get; set; }
-        public DbSet<Models.EntryScore> db_EntryScores { get; set; }
         public DbSet<Models.Crew> db_Crews { get; set; }
+        public DbSet<Models.Entry> db_Entrys { get; set; }
+        public DbSet<Models.EntryScore> db_EntryScores { get; set; }
+        public DbSet<Models.Horse> db_Horses { get; set; }
+        public DbSet<Models.Meeting> db_Meetings { get; set; }
+        public DbSet<Models.MeetingCrew> db_MeetingCrews { get; set; }
+        public DbSet<Models.Rider> db_Riders { get; set; }
     }
 }

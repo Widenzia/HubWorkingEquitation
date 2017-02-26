@@ -8,18 +8,18 @@ namespace WorkingEquitation.Models
 {
     public class Class
     {
-        public int ShowId { get; set; }
-        [Key]
+        public int ClassId { get; set; }
+        public int MeetingId { get; set; }
         public string ClassNo { get; set; }
         public string Level { get; set; }
         public int ClassCrewId { get; set; }
 
-        public Class(int showId, string classNo, string level, int classCrewId)
+        public Class( int meetingId, string classNo, string level, int classCrewId)
         {
-            ShowId = showId;
+            MeetingId = meetingId;
             ClassNo = classNo;
             Level = level;
-            ClassCrewId = classCrewId;
+            ClassCrewId = classCrewId; //Judges
         }
     }
 }

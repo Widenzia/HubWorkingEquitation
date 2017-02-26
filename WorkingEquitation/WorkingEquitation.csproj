@@ -156,14 +156,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
+    <Compile Include="Controllers\CrewsController.cs" />
+    <Compile Include="Controllers\EntriesController.cs" />
+    <Compile Include="Controllers\EntryScoresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DataAccessLayer\AppContext.cs" />
+    <Compile Include="Controllers\HorsesController.cs" />
+    <Compile Include="Controllers\MeetingCrewsController.cs" />
+    <Compile Include="Controllers\MeetingsController.cs" />
+    <Compile Include="Controllers\RidersController.cs" />
+    <Compile Include="DataAccessLayer\WEContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702122124416_Init4.cs" />
-    <Compile Include="Migrations\201702122124416_Init4.Designer.cs">
-      <DependentUpon>201702122124416_Init4.cs</DependentUpon>
+    <Compile Include="Migrations\201702261602024_Init.cs" />
+    <Compile Include="Migrations\201702261602024_Init.Designer.cs">
+      <DependentUpon>201702261602024_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class.cs" />
@@ -171,9 +179,9 @@
     <Compile Include="Models\Entry.cs" />
     <Compile Include="Models\Horse.cs" />
     <Compile Include="Models\Rider.cs" />
-    <Compile Include="Models\Show.cs" />
+    <Compile Include="Models\Meeting.cs" />
     <Compile Include="Models\Crew.cs" />
-    <Compile Include="Models\ShowCrew.cs" />
+    <Compile Include="Models\MeetingCrew.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +222,46 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Meetings\Create.cshtml" />
+    <Content Include="Views\Meetings\Delete.cshtml" />
+    <Content Include="Views\Meetings\Details.cshtml" />
+    <Content Include="Views\Meetings\Edit.cshtml" />
+    <Content Include="Views\Meetings\Index.cshtml" />
+    <Content Include="Views\Classes\Create.cshtml" />
+    <Content Include="Views\Classes\Delete.cshtml" />
+    <Content Include="Views\Classes\Details.cshtml" />
+    <Content Include="Views\Classes\Edit.cshtml" />
+    <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\Crews\Create.cshtml" />
+    <Content Include="Views\Crews\Delete.cshtml" />
+    <Content Include="Views\Crews\Details.cshtml" />
+    <Content Include="Views\Crews\Edit.cshtml" />
+    <Content Include="Views\Crews\Index.cshtml" />
+    <Content Include="Views\Entries\Create.cshtml" />
+    <Content Include="Views\Entries\Delete.cshtml" />
+    <Content Include="Views\Entries\Details.cshtml" />
+    <Content Include="Views\Entries\Edit.cshtml" />
+    <Content Include="Views\Entries\Index.cshtml" />
+    <Content Include="Views\EntryScores\Create.cshtml" />
+    <Content Include="Views\EntryScores\Delete.cshtml" />
+    <Content Include="Views\EntryScores\Details.cshtml" />
+    <Content Include="Views\EntryScores\Edit.cshtml" />
+    <Content Include="Views\EntryScores\Index.cshtml" />
+    <Content Include="Views\Horses\Create.cshtml" />
+    <Content Include="Views\Horses\Delete.cshtml" />
+    <Content Include="Views\Horses\Details.cshtml" />
+    <Content Include="Views\Horses\Edit.cshtml" />
+    <Content Include="Views\Horses\Index.cshtml" />
+    <Content Include="Views\MeetingCrews\Create.cshtml" />
+    <Content Include="Views\MeetingCrews\Delete.cshtml" />
+    <Content Include="Views\MeetingCrews\Details.cshtml" />
+    <Content Include="Views\MeetingCrews\Edit.cshtml" />
+    <Content Include="Views\MeetingCrews\Index.cshtml" />
+    <Content Include="Views\Riders\Create.cshtml" />
+    <Content Include="Views\Riders\Delete.cshtml" />
+    <Content Include="Views\Riders\Details.cshtml" />
+    <Content Include="Views\Riders\Edit.cshtml" />
+    <Content Include="Views\Riders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -227,8 +275,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702122124416_Init4.resx">
-      <DependentUpon>201702122124416_Init4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702261602024_Init.resx">
+      <DependentUpon>201702261602024_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

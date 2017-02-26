@@ -7,21 +7,21 @@ using System.Web;
 
 namespace WorkingEquitation.Models
 {
-    public class Horse
+    public class Meeting
     {
         [Key, Column(Order = 1)]
         public int MeetingId { get; set; }
 
         [Key, Column(Order = 2)]
-        public int HorseId { get; set; }
+        public DateTime Date { get; set; }
 
-        public string HorseName { get; set; }
+        public string MeetingName { get; set; }
 
-        public Horse(int meetingId, int horseId, string horseName)
+        public Meeting(int meetingId, DateTime date, string meetingName)
         {
             MeetingId = meetingId;
-            HorseId = horseId;
-            HorseName = horseName;
+            Date = date;
+            MeetingName = meetingName;
         }
     }
 }

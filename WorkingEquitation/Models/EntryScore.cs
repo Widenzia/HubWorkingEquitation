@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -7,22 +9,33 @@ namespace WorkingEquitation.Models
 {
     public class EntryScore
     {
-        public int ShowId { get; set; }
-        public string ClassNo { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        public int MeetingId { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        public string ClassId { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
         public int EntryId { get; set; }
-        public int CrewId { get; set; }
+        [Key]
+        [Column(Order = 4)]
         public int EntryScoreId { get; set; }
+
+        public int CrewId { get; set; }
         public string Position { get; set; }
         public double TotalPoints { get; set; }
         public double PointsPercent { get; set; }
 
-        public EntryScore(int showId, string classNo, int entryId, int crewId, int entryScoreId, string position, double totalPoints, double pointsPercent)
+        public EntryScore(int meetingId, string classId, int entryId, int entryScoreId, int crewId, string position, double totalPoints, double pointsPercent)
         {
-            ShowId = showId;
-            ClassNo = classNo;
+            MeetingId = meetingId;
+            ClassId = classId;
             EntryId = entryId;
-            CrewId = crewId;
             EntryScoreId = entryScoreId;
+            CrewId = crewId;
             Position = position;
             TotalPoints = totalPoints;
             PointsPercent = pointsPercent;
